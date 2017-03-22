@@ -1,0 +1,41 @@
+.interview-page {
+  display: -webkit-flex;
+  display: flex;
+  margin: 0;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  height: 100%; }
+  .interview-page .code-pad {
+    width: 100%;
+    height: 70%; }
+    .interview-page .code-pad .toolbar {
+      width: 100%;
+      height: 5%; }
+    .interview-page .code-pad .textEditor {
+      width: 100%;
+      height: 95%; }
+  .interview-page .chat-area {
+    width: 100%;
+    height: 30%; }
+    .interview-page .chat-area #firechat-header {
+      display: none !important; }
+  .interview-page .right-hand-panel {
+    height: 100%; }
+    .interview-page .right-hand-panel .video-feeds {
+      height: 35%; }
+      .interview-page .right-hand-panel .video-feeds .localVideo {
+        height: 100%;
+        width: 100%; }
+      .interview-page .right-hand-panel .video-feeds .remoteVideo {
+        height: 100%;
+        width: 100%; }
+    .interview-page .right-hand-panel .question-area {
+      height: 65%; }
+  .interview-page video {
+    width: 100%;
+    height: 100%; }
+
+.no-margin {
+  margin: 0 !important; }
