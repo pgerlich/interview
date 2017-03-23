@@ -14866,7 +14866,6 @@ var InterviewPageComponent = function (_React$Component) {
                                 break;
                             case 'chatMessage':
                                 _this2.messageReceived(payload.payload.sender, payload.payload.message);
-                                console.log('CALLED');
                                 break;
                         }
                     });
@@ -15119,17 +15118,23 @@ var ChatWindowComponent = function (_React$Component) {
     _createClass(ChatWindowComponent, [{
         key: "render",
         value: function render() {
-            console.log(this.props.messages);
-
             return _react2.default.createElement(
                 "div",
-                { id: "chat-area" },
-                this.renderMessages(),
-                _react2.default.createElement("input", { type: "text", id: "messageInput" }),
+                { className: "chat-area" },
                 _react2.default.createElement(
-                    "button",
-                    { onClick: this.sendMessageToPeer, className: "mdl-button mdl-js-button mdl-button--raised mdl-button--colored" },
-                    "Send Message"
+                    "div",
+                    { className: "chat-message-area" },
+                    this.renderMessages()
+                ),
+                _react2.default.createElement(
+                    "div",
+                    { className: "chat-input-area" },
+                    _react2.default.createElement("input", { type: "text", id: "messageInput", onKeyDown: this.sendMessageToPeer, className: "chat-input mdl-cell mdl-cell--9-col mdl-cell--6-col-tablet mdl-cell--3-col-phone no-margin" }),
+                    _react2.default.createElement(
+                        "button",
+                        { onClick: this.sendMessageToPeer, className: "mdl-button mdl-js-button mdl-button--raised mdl-button--colored chat-button mdl-cell mdl-cell--3-col mdl-cell--6-col-tablet mdl-cell--3-col-phone no-margin" },
+                        "Send Message"
+                    )
                 )
             );
         }
@@ -15156,15 +15161,22 @@ var ChatWindowComponent = function (_React$Component) {
                 "p",
                 { key: key },
                 message[0],
-                ":",
+                " : ",
                 message[1]
             );
         }
     }, {
         key: "sendMessageToPeer",
-        value: function sendMessageToPeer() {
-            var message = document.getElementById('messageInput').value;
-            this.props.onSendMessage(message);
+        value: function sendMessageToPeer(e) {
+            console.log(e.which);
+
+            // Mouseclick event or 'Enter' keydown
+            if (!e.which || e.which && e.which == 13) {
+                var message = document.getElementById('messageInput').value;
+                this.props.onSendMessage(message);
+
+                document.getElementById('messageInput').value = '';
+            }
         }
     }]);
 

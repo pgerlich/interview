@@ -11,16 +11,31 @@
     width: 100%;
     height: 70%; }
     .interview-page .code-pad .toolbar {
-      width: 100%;
-      height: 5%; }
+      width: 100%; }
     .interview-page .code-pad .textEditor {
       width: 100%;
       height: 95%; }
   .interview-page .chat-area {
     width: 100%;
-    height: 30%; }
-    .interview-page .chat-area #firechat-header {
-      display: none !important; }
+    height: 30%;
+    position: relative; }
+    .interview-page .chat-area .chat-message-area {
+      height: 80%;
+      overflow: scroll; }
+    .interview-page .chat-area .chat-input-area {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 20%; }
+      .interview-page .chat-area .chat-input-area .chat-button {
+        float: right; }
+    .interview-page .chat-area ::-webkit-scrollbar {
+      -webkit-appearance: none;
+      width: 7px; }
+    .interview-page .chat-area ::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      background-color: rgba(0, 0, 0, 0.5);
+      -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5); }
   .interview-page .right-hand-panel {
     height: 100%; }
     .interview-page .right-hand-panel .video-feeds {
