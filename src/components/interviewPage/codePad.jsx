@@ -69,14 +69,18 @@ class CodePadComponent extends React.Component {
     render() {
         return (
             <div className="code-pad">
-                <select value={this.props.mode} onChange={this.updateLanguage} className="toolbar">
-                    <option value="java">Java</option>
-                    <option value="c_cpp">C/C++</option>
-                    <option value="javascript">JS</option>
-                    <option value="python">Python</option>
-                </select>
-
                 <div id="textEditor" className="textEditor"></div>
+
+                <div className="toolbar">
+                    <div className="current-language-title">Current Language:</div>
+
+                    <select value={this.props.mode} onChange={this.updateLanguage} className="toolbar">
+                        <option value="java">Java</option>
+                        <option value="c_cpp">C/C++</option>
+                        <option value="javascript">Java Script</option>
+                        <option value="python">Python</option>
+                    </select>
+                </div>
             </div>
         );
     }

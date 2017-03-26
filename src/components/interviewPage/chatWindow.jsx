@@ -17,8 +17,11 @@ class ChatWindowComponent extends React.Component {
                     {this.renderMessages()}
                 </div>
                 <div className="chat-input-area">
-                    <input type="text" id="messageInput" onKeyDown={this.sendMessageToPeer} className="chat-input mdl-cell mdl-cell--9-col mdl-cell--6-col-tablet mdl-cell--3-col-phone no-margin"></input>
-                    <button onClick={this.sendMessageToPeer} className="mdl-button mdl-js-button mdl-button--raised mdl-button--colored chat-button mdl-cell mdl-cell--3-col mdl-cell--6-col-tablet mdl-cell--3-col-phone no-margin">Send Message</button>
+                    <input type="text" id="messageInput" onKeyDown={this.sendMessageToPeer} className="chat-input mdl-cell mdl-cell--9-col mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                    </input>
+                    <button onClick={this.sendMessageToPeer} className="mdl-button mdl-js-button mdl-button--raised mdl-button--colored chat-button mdl-cell mdl-cell--3-col mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                        Send Message
+                    </button>
                 </div>
             </div>
         );
@@ -44,8 +47,6 @@ class ChatWindowComponent extends React.Component {
     }
 
     sendMessageToPeer(e){
-        console.log(e.which);
-
         // Mouseclick event or 'Enter' keydown
         if (!e.which || (e.which && e.which == 13)) {
             let message = document.getElementById('messageInput').value;

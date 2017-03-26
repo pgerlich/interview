@@ -13,9 +13,13 @@ class RightHandPanelComponent extends React.Component {
     render() {
         return (
             <div className="question-area">
-                <QuestionComponent/>
-                <HintComponent/>
-                <AnswerComponent/>
+                <QuestionComponent
+                    title="This is a question"
+                    text="Here is a question for you"/>
+                <HintComponent
+                    hints={['list','of','hints']}/>
+                <AnswerComponent
+                    answer="Here is the answer"/>
             </div>
         );
     }

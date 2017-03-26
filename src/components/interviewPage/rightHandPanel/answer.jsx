@@ -10,8 +10,8 @@ class AnswerComponent extends React.Component {
         // TODO: Renders based on current role
         return (
             <div>
-                <h3>Answer</h3>
-                <blockquote>The answer</blockquote>
+                <h3 className="question-title">Answer</h3>
+                <blockquote>{this.props.answer}</blockquote>
             </div>
         );
     }

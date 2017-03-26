@@ -8,9 +8,9 @@ class QuestionComponent extends React.Component {
 
     render() {
         return (
-            <div>
-                <h3>Question Title</h3>
-                <blockquote>Question text</blockquote>
+            <div >
+                <h3 className="question-title">{this.props.title}</h3>
+                <blockquote>{this.props.text}</blockquote>
             </div>
         );
     }

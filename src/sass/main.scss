@@ -1,6 +1,20 @@
-// Place all imports here
-@import './interviewPage.scss';
+.wrapper {
+  min-height: 100%;
 
-.no-margin {
-  margin: 0 !important;
+  .nav-bar {
+    .display-avatar {
+      margin-left: 10px;
+    }
+  }
+
+  .main-content {
+    padding-top:64px;
+
+    @import './interviewPage.scss';
+  }
+
+  .footer {
+    position: relative;
+    bottom: 0;
+  }
 }
