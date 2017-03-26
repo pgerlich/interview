@@ -14,7 +14,7 @@ If you want to use watchers, you can open two terminals.
 
 At least this way you'll only have to refresh with every change instead of constantly rerunning commands.
 
-If anyone wants to add a command for hot reloading that would be dope. I didn't mess with it because it didn't work on first attempt :)
+If anyone wants to add a command for hot reloading that would be dope. I didn't mess with it because it didn't work on first attempt. :)
 
 With questions just reach out on the facebook group, or my email is paul@gerlich.io
 
