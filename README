@@ -1,18 +1,20 @@
-### Setup ### 
+### Installation
 After pulling down the repository, you'll want to install all of the node packages with:
-' npm -i '
+`npm -i
+`
 
-In order to make the sass files, you can do:
-'make sass'
-or
-'make run-sass'
+### Building
+Use 'make build' to build the SASS files, run the linter (to validate JS syntax), and build the output JS file.
 
-Where make run-sass will setup a watcher on changes to the sass files (for active development)
+### Active development
+If you want to use watchers, you can open two terminals. 
 
-Similarly, to build the project, you can do:
-'make build'
-Which compiles sass, runs the linter, and builds the JS. Or you can do:
-'make run'
-Which will just build the JS and setup a watcher for JS changes (for active development)
+- In one, run 'make run-sass' to have the SASS watcher constantly rebuilding the sass.
+- In the other, run 'make run' to have webpack watch and constantly rebuild the JS
+
+At least this way you'll only have to refresh with every change instead of constantly rerunning commands.
+
+If anyone wants to add a command for hot reloading that would be dope. I didn't mess with it because it didn't work on first attempt :)
 
 With questions just reach out on the facebook group, or my email is paul@gerlich.io
+
