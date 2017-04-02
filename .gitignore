@@ -1,3 +1,5 @@
 node_modules/*
 .idea/*
 .sass-cache/*
+build.zip
+src/bundle.js
